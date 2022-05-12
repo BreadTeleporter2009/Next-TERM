@@ -16,13 +16,17 @@ class Program {
         string directory=command.Replace("cd ", "");
         Environment.CurrentDirectory = directory;
       }
-      if (command=="whoami")
+      else if (command=="whoami")
       {
         Console.WriteLine($"You are currently logged in as: {user}");
       }
       else if (command=="ver" || command=="version")
       {
         Console.WriteLine("Next TERM Alpha 1");
+      }
+      else if (command=="calc" || command=="calculator")
+      {
+          System.Diagnostics.Process.Start("programs/calc.exe")
       }
       else
       {
